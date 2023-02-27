@@ -12,8 +12,8 @@
 # @@Description      :  docker installer script for buildah
 # @@Changelog        :  New script
 # @@TODO             :  Better documentation
-# @@Other            :  
-# @@Resource         :  
+# @@Other            :
+# @@Resource         :
 # @@Terminal App     :  no
 # @@sudo/root        :  no
 # @@Template         :  installers/dockermgr
@@ -256,7 +256,7 @@ CONTAINER_LINK=""
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 # Define additional mounts [ /dir:/dir,/otherdir:/otherdir ]
 ADDITIONAL_MOUNTS="$LOCAL_CONFIG_DIR:/config:z,$LOCAL_DATA_DIR:/data:z "
-ADDITIONAL_MOUNTS+=""
+ADDITIONAL_MOUNTS+="$HOME/.docker:/root/.docker:ro"
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 # Define additional variables [ myvar=var,myothervar=othervar ]
 ADDITION_ENV=""
@@ -267,7 +267,7 @@ ADDITION_DEVICES=""
 ADDITION_DEVICES+=""
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 # Enable cgroups [yes/no]
-CGROUP_ENABLED="no"
+CGROUP_ENABLED="yes"
 CGROUP_MOUNTS="/sys/fs/cgroup:/sys/fs/cgroup:ro"
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 # Define labels [ traefik.enable=true ] [ label=label,otherlabel=label2 ]
@@ -282,7 +282,7 @@ CUSTOM_ARGUMENTS+=""
 POST_SHOW_FINISHED_MESSAGE=""
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 # Setup nginx proxy variables [yes,no]
-NGINX_PROXY="yes"
+NGINX_PROXY="no"
 NGINX_AUTH="no"
 NGINX_SSL="yes"
 NGINX_HTTP="80"
