@@ -12,8 +12,8 @@
 # @@Description      :  Container installer script for buildah
 # @@Changelog        :  New script
 # @@TODO             :  Completely rewrite/refactor/variable cleanup
-# @@Other            :  
-# @@Resource         :  
+# @@Other            :
+# @@Resource         :
 # @@Terminal App     :  no
 # @@sudo/root        :  no
 # @@Template         :  installers/dockermgr
